@@ -12,7 +12,6 @@ function NavBar(props){
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100px'
-
   };
 
   const rightStyles = {

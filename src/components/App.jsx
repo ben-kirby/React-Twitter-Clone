@@ -7,7 +7,7 @@ import RecommendedList from './RecommendedList';
 function App(props){
   const bodyStyle = {
     display: 'flex',
-    backgroundColor: 'bisque'
+    backgroundColor: '#E6ECF0',
   };
   return (
     <div>

@@ -1,15 +1,16 @@
 import React from 'react';
-
+import BioProfile from './BioProfile';
+import BioText from './BioText';
 function Bio(props){
   const bioStyles = {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'LightSalmon',
     width: '30%'
   };
   return (
     <div style={bioStyles}>
-      <h1>Bio</h1>
+      <BioProfile/>
+        <BioText/>
     </div>
   );
 }
