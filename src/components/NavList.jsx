@@ -1,5 +1,17 @@
 import React from 'react';
 
+const buttonList = [
+  {
+    name: 'Home'
+  },
+  {
+    name: 'Notifications'
+  },
+  {
+    name: 'Followers'
+  }
+];
+
 function NavList(props){
   const buttonListStyles ={
     marginLeft: '20px',
@@ -8,20 +20,20 @@ function NavList(props){
 
   const buttonStyles ={
     border: 'none',
-    color: '#DCDCDC',
+    color: '#696969',
     padding: '15px 32px',
     textAlign: 'center',
     textDecoration: 'none',
     display: 'inline-block',
-    border: '1px solid #DCDCDC',
+    border: '1px solid #696969',
     fontSize: '16px',
-    backgroundColor: 'white'
   }
+
   return(
     <div style={buttonListStyles}>
-      <button style={buttonStyles}>Home</button>
-      <button style={buttonStyles}>Notifications</button>
-      <button style={buttonStyles}>Followers</button>
+      {buttonList.map((button, index) =>
+        <button key={index} style={buttonStyles}>{button.name}</button>
+      )};
     </div>
   );
 }

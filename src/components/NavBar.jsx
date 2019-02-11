@@ -8,7 +8,7 @@ function NavBar(props){
     display: 'flex',
     border: '1 solid black',
     // paddingTop: '50px',
-    backgroundColor: 'tomato',
+    backgroundColor: 'white',
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100px'

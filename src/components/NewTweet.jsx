@@ -2,8 +2,8 @@ import React from 'react';
 
 function NewTweet(props){
   const buttonStyles ={
-    border: '1px solid blue',
-    color: '#DCDCDC',
+    border: '2px solid #4682B4',
+    color: '#696969',
     padding: '15px 32px',
     textAlign: 'center',
     textDecoration: 'none',
