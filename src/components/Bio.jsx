@@ -6,7 +6,7 @@ function Bio(props){
     flexDirection: 'column',
     backgroundColor: 'LightSalmon',
     width: '30%'
-  }
+  };
   return (
     <div style={bioStyles}>
       <h1>Bio</h1>

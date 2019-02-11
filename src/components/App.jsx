@@ -8,7 +8,7 @@ function App(props){
   const bodyStyle = {
     display: 'flex',
     backgroundColor: 'bisque'
-  }
+  };
   return (
     <div>
       <div>
@@ -20,7 +20,7 @@ function App(props){
         <RecommendedList/>
       </div>
     </div>
-    );
-  }
+  );
+}
 
 export default App;

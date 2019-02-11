@@ -12,7 +12,7 @@ function Search(props){
     backgroundColor: 'white',
     borderRadius: '25rem',
     marginRight: '5px'
-  }
+  };
   return(
     <div>
       <input style={searchStyles} placeholder='Search'></input>

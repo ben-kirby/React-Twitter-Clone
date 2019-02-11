@@ -11,7 +11,7 @@ function NewTweet(props){
     fontSize: '16px',
     backgroundColor: 'white',
     borderRadius: '25rem'
-  }
+  };
   return(
     <div>
       <button style={buttonStyles}>New Tweet</button>

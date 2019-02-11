@@ -19,16 +19,15 @@ function NavBar(props){
     display: 'flex',
     justifyContent: 'flex-end',
     paddingRight: '20px'
-  }
+  };
 
   return (
     <div style={navbarStyles}>
       <NavList/>
-        <div style={rightStyles}>
-          <Search/>
-          <NewTweet/>
-        </div>
-
+      <div style={rightStyles}>
+        <Search/>
+        <NewTweet/>
+      </div>
     </div>
   );
 }
