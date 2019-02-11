@@ -20,14 +20,14 @@ function BioProfile(props){
     padding: '5px',
     borderRadius: '25rem',
     backgroundColor: 'white'
-  }
+  };
 
   const boxStyles = {
     backgroundColor: 'white',
     margin: '10px',
     border: 'none',
     fontFamily: 'Arial'
-  }
+  };
 
   const buttonStyles ={
     color: '#696969',
@@ -44,7 +44,7 @@ function BioProfile(props){
 
   const titleStyles ={
     marginLeft: '10px'
-  }
+  };
 
   const picAndTitle = {
     marginLeft: '10px',
@@ -52,12 +52,12 @@ function BioProfile(props){
     alignItems: 'baseline',
     zIndex: '1',
     marginTop: '-45px'
-  }
+  };
 
   const centerContent = {
     display: 'flex',
     justifyContent: 'center'
-  }
+  };
 
   const backgroundColor ={
     backgroundColor: 'tomato',
@@ -65,7 +65,7 @@ function BioProfile(props){
     height: '100px',
     margin: '0px'
 
-  }
+  };
 
   return(
     <div style={boxStyles}>
@@ -76,11 +76,11 @@ function BioProfile(props){
         <h3 style={titleStyles}>Ben Kirby</h3>
       </div>
       <div style={centerContent}>
-      {profileButtons.map((button, index) =>
-        <button key={index} style={buttonStyles}>{button.name}</button>
-      )}
+        {profileButtons.map((button, index) =>
+          <button key={index} style={buttonStyles}>{button.name}</button>
+        )}
+      </div>
     </div>
-    </div>
-  )
-};
+  );
+}
 export default BioProfile;

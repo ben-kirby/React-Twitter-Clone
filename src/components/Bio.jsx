@@ -10,7 +10,7 @@ function Bio(props){
   return (
     <div style={bioStyles}>
       <BioProfile/>
-        <BioText/>
+      <BioText/>
     </div>
   );
 }

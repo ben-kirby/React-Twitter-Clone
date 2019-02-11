@@ -20,19 +20,18 @@ function BioText(props){
     backgroundColor: 'white',
     margin: '10px',
     border: 'none',
-    paddingLeft: '10px',
-    paddingRight: '10px',
-    fontFamily: 'Arial'
-  }
+    fontFamily: 'Arial',
+    padding: '0px 10px 0px 10px'
+  };
 
   const titleStyles = {
     color: 'tomato',
     marginBottom: '-10px'
-  }
+  };
 
   const trendsStyles = {
 
-  }
+  };
 
   return(
     <div style={boxStyles}>
