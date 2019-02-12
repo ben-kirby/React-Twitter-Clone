@@ -1,4 +1,5 @@
 import React from 'react';
+import Recommended from './Recommended'
 
 const recommendedList = [
   {
@@ -22,13 +23,33 @@ const recommendedList = [
 function RecommendedList(props){
   const recommendedListStyles = {
     display: 'flex',
-    backgroundColor: 'bisque',
+    flexDirection: 'column',
+    backgroundColor: 'white',
     height: '1000px',
-    width: '30%'
+    // width: '30%'
   };
+
+  const largerBox ={
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: 'white',
+    paddingLeft: '10px',
+    margin: '10px',
+    height: '1000px',
+    width: '30%',
+    fontFamily: 'Arial'
+  }
   return(
-    <div style={recommendedListStyles}>
-      <h1>Recommended List</h1>
+    <div style={largerBox}>
+      <h2>Recommended</h2>
+      <div style={recommendedListStyles}>
+        {recommendedList.map((recommendation, index) =>
+        <Recommended name = {recommendation.name}
+          username = {recommendation.username}
+          profilePic = {recommendation.profilePic}
+          key = {index}/>
+      )}
+      </div>
     </div>
   );
 }

@@ -18,6 +18,7 @@ function BioProfile(props){
     height: '50px',
     border: '1px solid #696969',
     padding: '5px',
+    marginTop: '10px',
     borderRadius: '25rem',
     backgroundColor: 'white'
   };

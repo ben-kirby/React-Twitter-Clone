@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function Tweet (props){
   const tweetBoxStyles = {
@@ -41,5 +43,12 @@ function Tweet (props){
     </div>
   );
 }
+
+Tweet.propTypes = {
+  name: PropTypes.string,
+  username: PropTypes.string,
+  body: PropTypes.string,
+  profilePic: PropTypes.string
+};
 
 export default Tweet;
