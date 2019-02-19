@@ -38,7 +38,8 @@ class NewTweetModal extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className='modal'>
+        <div className='modalContent'></div>
         <input></input>
         <div>
           <Button buttonText = 'Cancel'/>

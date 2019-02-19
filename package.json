@@ -12,13 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "@mdi/font": "^3.4.93",
     "@mdi/js": "^3.4.93",
     "@mdi/react": "^1.1.0",
     "@mdi/svg": "^3.4.93",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {

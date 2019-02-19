@@ -3,6 +3,7 @@ import Bio from './Bio';
 import NavBar from './NavBar';
 import TweetList from './TweetList';
 import RecommendedList from './RecommendedList';
+import MouseOverPopover from './test'
 
 function App(){
   const bodyStyle = {
@@ -19,6 +20,7 @@ function App(){
         <TweetList/>
         <RecommendedList/>
       </div>
+      <MouseOverPopover/>
     </div>
   );
 }

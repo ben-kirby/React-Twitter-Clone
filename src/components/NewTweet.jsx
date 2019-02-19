@@ -1,6 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import Button from './miscComponents/button';
 import NewTweetModal from './NewTweetModal';
+
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   display:{
@@ -23,10 +28,12 @@ class NewTweet extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
     }
     this.displayModal = this.displayModal.bind(this);
   }
+
+
 
 
   displayModal(){
@@ -39,8 +46,11 @@ class NewTweet extends React.Component {
     if (this.state.modal === true) {
       modalContent = <NewTweetModal/>;
     }
+
+
     return(
       <div style={styles.display}>
+
         <Button
           style={styles.buttonStyles}
           buttonText = 'New Tweet'
