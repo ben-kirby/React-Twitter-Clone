@@ -12,7 +12,7 @@ const profileButtons = [
   }
 ];
 
-function BioProfile(props){
+function BioProfile(){
   const imgStyles = {
     width: '50px',
     height: '50px',

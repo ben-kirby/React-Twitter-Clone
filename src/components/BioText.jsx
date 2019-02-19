@@ -15,7 +15,7 @@ const trendsList = [
   }
 ];
 
-function BioText(props){
+function BioText(){
   const boxStyles = {
     backgroundColor: 'white',
     margin: '10px',
@@ -37,8 +37,8 @@ function BioText(props){
     <div style={boxStyles}>
       <h3>Portland Trends </h3>
       {trendsList.map((trend, index) =>
-        <div style={trendsStyles}>
-          <h4 style={titleStyles} key={index}>{trend.title}</h4>
+        <div key={index} style={trendsStyles}>
+          <h4 style={titleStyles} >{trend.title}</h4>
           <p>{trend.body}</p>
         </div>
       )}

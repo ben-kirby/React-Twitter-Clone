@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search(props){
+function Search(){
   const searchStyles = {
     border: '2px solid #4682B4',
     color: '#696969',

@@ -3,7 +3,7 @@ import NavList from './NavList';
 import Search from './Search';
 import NewTweet from './NewTweet';
 
-function NavBar(props){
+function NavBar(){
   const navbarStyles ={
     display: 'flex',
     border: '1 solid black',

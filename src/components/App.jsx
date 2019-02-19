@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import TweetList from './TweetList';
 import RecommendedList from './RecommendedList';
 
-function App(props){
+function App(){
   const bodyStyle = {
     display: 'flex',
     backgroundColor: '#E6ECF0',

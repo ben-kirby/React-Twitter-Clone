@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '@mdi/react'
-import { mdiComment, mdiTwitterRetweet, mdiHeart } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiComment, mdiTwitterRetweet, mdiHeart } from '@mdi/js';
 
 
 const styles = {
@@ -43,7 +43,7 @@ const styles = {
     alignItems: 'center',
     marginRight: '5px'
   }
-}
+};
 
 class Tweet extends React.Component {
 
@@ -53,28 +53,26 @@ class Tweet extends React.Component {
       isLiked:false,
       likeCount: props.likes
     };
-   this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(){
     let likeCount = this.props.likes;
-    console.log(likeCount);
     this.setState({isLiked: !this.state.isLiked});
-    console.log(this.state.isLiked);
 
     if (this.state.isLiked === true) {
-      likeCount+=1
+      likeCount+=1;
       // return likeCount
     }
     else if (this.state.isLIked === false) {
-      likeCount-=1
+      likeCount-=1;
       // return likeCount
     }
     this.setState({likeCount: likeCount});
   }
 
 
-render(){
+  render(){
 
 
     return (
@@ -84,8 +82,8 @@ render(){
             <img style={styles.image} src={`${this.props.profilePic}`}></img>
           </div>
           <div style={styles.tweetContent}>
-          <p><strong>{this.props.name}</strong> @{this.props.username}</p>
-          <p>{this.props.body}</p>
+            <p><strong>{this.props.name}</strong> @{this.props.username}</p>
+            <p>{this.props.body}</p>
           </div>
 
           <div style={styles.flex}>
@@ -100,7 +98,7 @@ render(){
 
             <div style={styles.iconRow}>
               <Icon onClick={this.handleClick} style={styles.icon} path={mdiHeart}/>
-                <p>{this.state.likeCount}</p>
+              <p>{this.state.likeCount}</p>
             </div>
           </div>
         </div>
@@ -113,7 +111,9 @@ Tweet.propTypes = {
   name: PropTypes.string,
   username: PropTypes.string,
   body: PropTypes.string,
-  profilePic: PropTypes.string
+  profilePic: PropTypes.string,
+  likes: PropTypes.number,
+  comments: PropTypes.number
 };
 
 export default Tweet;

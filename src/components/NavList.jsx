@@ -12,7 +12,7 @@ const buttonList = [
   }
 ];
 
-function NavList(props){
+function NavList(){
   const buttonListStyles ={
     marginLeft: '20px',
     // alignContent: 'center'

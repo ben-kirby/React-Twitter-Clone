@@ -1,7 +1,8 @@
 import React from 'react';
 import BioProfile from './BioProfile';
 import BioText from './BioText';
-function Bio(props){
+
+function Bio(){
   const bioStyles = {
     display: 'flex',
     flexDirection: 'column',

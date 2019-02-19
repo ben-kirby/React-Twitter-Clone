@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NewTweet(props){
+function NewTweet(){
   const buttonStyles ={
     border: '2px solid #4682B4',
     color: '#696969',
