@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './miscComponents/button'
+import Button from './miscComponents/button';
 
 const buttonList = [
   {
@@ -28,7 +28,7 @@ const styles = {
     border: '1px solid #696969',
     fontSize: '16px',
   }
-}
+};
 
 function NavList(){
   return(

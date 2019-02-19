@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Profile from './miscComponents/profilePic'
+import Profile from './miscComponents/profilePic';
 
 import Icon from '@mdi/react';
 import { mdiComment, mdiTwitterRetweet, mdiHeart } from '@mdi/js';
@@ -71,12 +71,12 @@ class Tweet extends React.Component {
 
     if (this.state.isLiked === false) {
       likeCount+=1;
-      styles.likeIcon.fill = 'red'
+      styles.likeIcon.fill = 'red';
 
       // return likeCount
     }
     else if (this.state.isLiked === true) {
-      styles.likeIcon.fill = 'grey'
+      styles.likeIcon.fill = 'grey';
 
     }
     this.setState({likeCount: likeCount});
@@ -89,9 +89,9 @@ class Tweet extends React.Component {
     return (
       <div>
         <div style={styles.tweetBox}>
-            <Profile
-              source = {this.props.profilePic}
-            />
+          <Profile
+            source = {this.props.profilePic}
+          />
           <div style={styles.tweetContent}>
             <p><strong>{this.props.name}</strong> @{this.props.username}</p>
             <p>{this.props.body}</p>

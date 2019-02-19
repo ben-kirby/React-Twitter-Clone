@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './miscComponents/button'
-import Profile from './miscComponents/profilePic'
+import Button from './miscComponents/button';
+import Profile from './miscComponents/profilePic';
 
 const styles = {
   recommendedBoxStyles: {
@@ -40,15 +40,15 @@ const styles = {
     backgroundColor: 'white',
     borderRadius: '25rem'
   }
-}
+};
 
 function Recommended(props){
   return(
     <div>
       <div style={styles.recommendedBoxStyles}>
-          <Profile
-            source = {props.profilePic}
-          />
+        <Profile
+          source = {props.profilePic}
+        />
         <div style={styles.tweetContentStyle}>
           <p><strong>{props.name}</strong> @{props.username}</p>
         </div>

@@ -1,7 +1,11 @@
 import React from 'react';
-import Button from './miscComponents/button'
+import Button from './miscComponents/button';
+import NewTweetModal from './NewTweetModal';
 
 const styles = {
+  display:{
+    display: 'flex'
+  },
   buttonStyles: {
     border: '2px solid #4682B4',
     color: '#696969',
@@ -13,17 +17,40 @@ const styles = {
     backgroundColor: 'white',
     borderRadius: '25rem'
   }
+};
+
+class NewTweet extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    }
+    this.displayModal = this.displayModal.bind(this);
+  }
+
+
+  displayModal(){
+    // console.log("hello");
+    this.setState({modal: !this.state.modal});
+  }
+
+  render(){
+    let modalContent = null;
+    if (this.state.modal === true) {
+      modalContent = <NewTweetModal/>;
+    }
+    return(
+      <div style={styles.display}>
+        <Button
+          style={styles.buttonStyles}
+          buttonText = 'New Tweet'
+          action = {this.displayModal}
+        />
+      {modalContent}
+      </div>
+    );
+  }
 }
 
-function NewTweet(){
-  return(
-    <div>
-      <Button
-        style={styles.buttonStyles}
-        buttonText = 'New Tweet'
-      />
-    </div>
-  );
-}
 
 export default NewTweet;
