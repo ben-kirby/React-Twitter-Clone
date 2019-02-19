@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Profile from './miscComponents/profilePic'
 
 import Icon from '@mdi/react';
 import { mdiComment, mdiTwitterRetweet, mdiHeart } from '@mdi/js';
@@ -34,14 +35,22 @@ const styles = {
     marginLeft: '15px'
   },
   icon: {
-    height: '25px',
-    width: '25px',
-    marginRight: '5px'
+    height: '20px',
+    width: '20px',
+    marginRight: '5px',
+    fill: 'grey'
+  },
+  likeIcon: {
+    height: '20px',
+    width: '20px',
+    marginRight: '5px',
+    fill: 'grey'
   },
   iconRow: {
     display: 'flex',
     alignItems: 'center',
-    marginRight: '5px'
+    marginRight: '5px',
+    color: 'grey'
   }
 };
 
@@ -60,13 +69,15 @@ class Tweet extends React.Component {
     let likeCount = this.props.likes;
     this.setState({isLiked: !this.state.isLiked});
 
-    if (this.state.isLiked === true) {
+    if (this.state.isLiked === false) {
       likeCount+=1;
+      styles.likeIcon.fill = 'red'
+
       // return likeCount
     }
-    else if (this.state.isLIked === false) {
-      likeCount-=1;
-      // return likeCount
+    else if (this.state.isLiked === true) {
+      styles.likeIcon.fill = 'grey'
+
     }
     this.setState({likeCount: likeCount});
   }
@@ -78,9 +89,9 @@ class Tweet extends React.Component {
     return (
       <div>
         <div style={styles.tweetBox}>
-          <div style={styles.profilePic}>
-            <img style={styles.image} src={`${this.props.profilePic}`}></img>
-          </div>
+            <Profile
+              source = {this.props.profilePic}
+            />
           <div style={styles.tweetContent}>
             <p><strong>{this.props.name}</strong> @{this.props.username}</p>
             <p>{this.props.body}</p>
@@ -97,7 +108,7 @@ class Tweet extends React.Component {
             </div>
 
             <div style={styles.iconRow}>
-              <Icon onClick={this.handleClick} style={styles.icon} path={mdiHeart}/>
+              <Icon onClick={this.handleClick} style={styles.likeIcon} path={mdiHeart}/>
               <p>{this.state.likeCount}</p>
             </div>
           </div>

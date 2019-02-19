@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './miscComponents/button'
 
 const buttonList = [
   {
@@ -12,13 +13,13 @@ const buttonList = [
   }
 ];
 
-function NavList(){
-  const buttonListStyles ={
+const styles = {
+  buttonList: {
     marginLeft: '20px',
+    display: 'flex'
     // alignContent: 'center'
-  };
-
-  const buttonStyles ={
+  },
+  button: {
     color: '#696969',
     padding: '15px 32px',
     textAlign: 'center',
@@ -26,12 +27,18 @@ function NavList(){
     display: 'inline-block',
     border: '1px solid #696969',
     fontSize: '16px',
-  };
+  }
+}
 
+function NavList(){
   return(
-    <div style={buttonListStyles}>
+    <div style={styles.buttonList}>
       {buttonList.map((button, index) =>
-        <button key={index} style={buttonStyles}>{button.name}</button>
+        <Button
+          buttonText = {button.name}
+          style = {styles.button}
+          key = {index}
+        />
       )}
     </div>
   );

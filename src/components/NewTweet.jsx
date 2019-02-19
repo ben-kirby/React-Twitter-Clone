@@ -1,7 +1,8 @@
 import React from 'react';
+import Button from './miscComponents/button'
 
-function NewTweet(){
-  const buttonStyles ={
+const styles = {
+  buttonStyles: {
     border: '2px solid #4682B4',
     color: '#696969',
     padding: '15px 32px',
@@ -11,10 +12,16 @@ function NewTweet(){
     fontSize: '16px',
     backgroundColor: 'white',
     borderRadius: '25rem'
-  };
+  }
+}
+
+function NewTweet(){
   return(
     <div>
-      <button style={buttonStyles}>New Tweet</button>
+      <Button
+        style={styles.buttonStyles}
+        buttonText = 'New Tweet'
+      />
     </div>
   );
 }
