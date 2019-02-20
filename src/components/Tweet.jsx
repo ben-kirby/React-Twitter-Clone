@@ -5,7 +5,6 @@ import Profile from './miscComponents/profilePic';
 import Icon from '@mdi/react';
 import { mdiComment, mdiTwitterRetweet, mdiHeart } from '@mdi/js';
 
-
 const styles = {
   tweetBox: {
     border: 'none',
@@ -40,12 +39,6 @@ const styles = {
     marginRight: '5px',
     fill: 'grey'
   },
-  likeIcon: {
-    height: '20px',
-    width: '20px',
-    marginRight: '5px',
-    fill: 'grey'
-  },
   iconRow: {
     display: 'flex',
     alignItems: 'center',
@@ -53,6 +46,7 @@ const styles = {
     color: 'grey'
   }
 };
+
 
 class Tweet extends React.Component {
 
@@ -71,19 +65,31 @@ class Tweet extends React.Component {
 
     if (this.state.isLiked === false) {
       likeCount+=1;
-      styles.likeIcon.fill = 'red';
 
       // return likeCount
-    }
-    else if (this.state.isLiked === true) {
-      styles.likeIcon.fill = 'grey';
-
     }
     this.setState({likeCount: likeCount});
   }
 
 
   render(){
+    let likeStyle = null;
+
+    if (this.state.isLiked === true) {
+      likeStyle = {
+        height: '20px',
+        width: '20px',
+        marginRight: '5px',
+        fill: 'red'
+      };
+    } else {
+      likeStyle = {
+        height: '20px',
+        width: '20px',
+        marginRight: '5px',
+        fill: 'grey'
+      };
+    }
 
 
     return (
@@ -108,7 +114,7 @@ class Tweet extends React.Component {
             </div>
 
             <div style={styles.iconRow}>
-              <Icon onClick={this.handleClick} style={styles.likeIcon} path={mdiHeart}/>
+              <Icon onClick={this.handleClick} style={likeStyle} path={mdiHeart}/>
               <p>{this.state.likeCount}</p>
             </div>
           </div>

@@ -1,75 +1,44 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBContainer } from 'mdbreact';
 
-const styles = theme => ({
-  popover: {
-    pointerEvents: 'none',
-  },
-  paper: {
-    padding: theme.spacing.unit,
-  },
-});
+function Test(){
+  return (
+    <MDBContainer>
+      <div style={{ display: 'flex' }} className="m-5 p-5">
+        <MDBPopover component="button" placement="top" popoverBody="popover on top" className="btn btn-default">
+          <MDBPopoverHeader>popover on top</MDBPopoverHeader>
+          <MDBPopoverBody>
+            Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </MDBPopoverBody>
+        </MDBPopover>
 
-class MouseOverPopover extends React.Component {
-  constructor
-  state = {
-    anchorEl: null,
-  };
+        <MDBPopover component="button" placement="right" popoverBody="popover on right" className="btn btn-default">
+          <MDBPopoverHeader>popover on right</MDBPopoverHeader>
+          <MDBPopoverBody>
+            Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </MDBPopoverBody>
+        </MDBPopover>
 
-  handlePopoverOpen = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
+        <MDBPopover component="button" placement="bottom" popoverBody="popover on bottom" className="btn btn-default">
+          <MDBPopoverHeader>popover on bottom</MDBPopoverHeader>
+          <MDBPopoverBody>
+            Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </MDBPopoverBody>
+        </MDBPopover>
 
-  handlePopoverClose = () => {
-    this.setState({ anchorEl: null });
-  };
-
-  render() {
-    const { classes } = this.props;
-    const { anchorEl } = this.state;
-    const open = Boolean(anchorEl);
-
-    return (
-      <div>
-        <Typography
-          aria-owns={open ? 'mouse-over-popover' : undefined}
-          aria-haspopup="true"
-          onMouseEnter={this.handlePopoverOpen}
-          onMouseLeave={this.handlePopoverClose}
-        >
-          Hover with a Popover.
-        </Typography>
-        <Popover
-          id="mouse-over-popover"
-          className={classes.popover}
-          classes={{
-            paper: classes.paper,
-          }}
-          open={open}
-          anchorEl={anchorEl}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
-          }}
-          onClose={this.handlePopoverClose}
-          disableRestoreFocus
-        >
-          <Typography>I use Popover.</Typography>
-        </Popover>
+        <MDBPopover component="button" placement="left" popoverBody="popover on left" className="btn btn-default">
+          <MDBPopoverHeader>popover on left</MDBPopoverHeader>
+          <MDBPopoverBody>
+            Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </MDBPopoverBody>
+        </MDBPopover>
       </div>
-    );
-  }
+    </MDBContainer>
+  );
 }
 
-MouseOverPopover.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(MouseOverPopover);
+export default Test;

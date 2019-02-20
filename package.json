@@ -17,9 +17,11 @@
     "@mdi/js": "^3.4.93",
     "@mdi/react": "^1.1.0",
     "@mdi/svg": "^3.4.93",
+    "mdbreact": "^4.11.0",
     "prop-types": "^15.5.10",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
+    "react-materialize": "^2.6.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {

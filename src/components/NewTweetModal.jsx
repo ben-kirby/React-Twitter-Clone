@@ -10,9 +10,7 @@ const styles = {
     top: '0',
     width: '100%', /* Full width */
     height: '100%', /* Full height */
-    overflow: 'auto', /* Enable scroll if needed */
-    backgroundColor: 'rgb(0,0,0)', /* Fallback color */
-    backgroundColor: 'rgba(0,0,0,0.4)', /* Black w/ opacity */
+    overflow: 'auto',
   },
   modalContent: {
     backgroundColor: '#fefefe',
@@ -29,27 +27,17 @@ const styles = {
   }
 };
 
-class NewTweetModal extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
-
-
-  render(){
-    return(
-      <div className='modal'>
-        <div className='modalContent'></div>
-        <input></input>
-        <div>
-          <Button buttonText = 'Cancel'/>
-          <Button buttonText = 'Submit'/>
-        </div>
-
-
-      </div>
-    );
-  }
+function NewTweetModal(){
+  return(
+    <div>
+      input
+    </div>
+  );
 }
+
+
+
+
 
 export default NewTweetModal;

@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import { MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBContainer } from 'mdbreact';
 import Button from './miscComponents/button';
 import NewTweetModal from './NewTweetModal';
 
-import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   display:{
@@ -29,34 +26,33 @@ class NewTweet extends React.Component {
     super(props);
     this.state = {
       modal: false,
-    }
+    };
     this.displayModal = this.displayModal.bind(this);
   }
-
-
-
-
   displayModal(){
     // console.log("hello");
     this.setState({modal: !this.state.modal});
   }
 
   render(){
-    let modalContent = null;
-    if (this.state.modal === true) {
-      modalContent = <NewTweetModal/>;
-    }
-
-
     return(
       <div style={styles.display}>
+
+        <MDBContainer>
+          <MDBPopover component="button" placement="bottom" popoverBody="New Tweet" className="btn btn-default">
+            <MDBPopoverBody>
+            <NewTweetModal/>
+            </MDBPopoverBody>
+          </MDBPopover>
+        </MDBContainer>
+
 
         <Button
           style={styles.buttonStyles}
           buttonText = 'New Tweet'
           action = {this.displayModal}
         />
-      {modalContent}
+
       </div>
     );
   }
